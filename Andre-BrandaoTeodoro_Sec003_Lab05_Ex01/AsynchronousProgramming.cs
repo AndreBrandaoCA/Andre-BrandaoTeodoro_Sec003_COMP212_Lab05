@@ -25,6 +25,7 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
             factorialResultLabel.Text = Convert.ToString(task1.Result);
         }
 
+
         private long Factorial(long num)
         {
             long factorial = 1;
