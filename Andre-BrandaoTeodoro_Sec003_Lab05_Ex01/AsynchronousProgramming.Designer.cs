@@ -36,13 +36,12 @@
             this.checkGroupBox = new System.Windows.Forms.GroupBox();
             this.evenOddResultLabel = new System.Windows.Forms.Label();
             this.checkEvenOddButton = new System.Windows.Forms.Button();
-            this.eveOddTextBox = new System.Windows.Forms.TextBox();
+            this.evenOddTextBox = new System.Windows.Forms.TextBox();
             this.evenOddLabel = new System.Windows.Forms.Label();
             this.displayValueSearchGroupBox = new System.Windows.Forms.GroupBox();
             this.integerRadioButton = new System.Windows.Forms.RadioButton();
             this.doubleRadioButton = new System.Windows.Forms.RadioButton();
             this.charRadioButton = new System.Windows.Forms.RadioButton();
-            this.numbersTextBox = new System.Windows.Forms.TextBox();
             this.valueForSearchLabel = new System.Windows.Forms.Label();
             this.valueForSearchTextBox = new System.Windows.Forms.TextBox();
             this.lowIndexTextBox = new System.Windows.Forms.TextBox();
@@ -54,6 +53,7 @@
             this.generateValuesButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.displayButton = new System.Windows.Forms.Button();
+            this.valuesListBox = new System.Windows.Forms.ListBox();
             this.calculateGroupBox.SuspendLayout();
             this.checkGroupBox.SuspendLayout();
             this.displayValueSearchGroupBox.SuspendLayout();
@@ -111,7 +111,7 @@
             this.checkGroupBox.BackColor = System.Drawing.SystemColors.Control;
             this.checkGroupBox.Controls.Add(this.evenOddResultLabel);
             this.checkGroupBox.Controls.Add(this.checkEvenOddButton);
-            this.checkGroupBox.Controls.Add(this.eveOddTextBox);
+            this.checkGroupBox.Controls.Add(this.evenOddTextBox);
             this.checkGroupBox.Controls.Add(this.evenOddLabel);
             this.checkGroupBox.Location = new System.Drawing.Point(13, 166);
             this.checkGroupBox.Name = "checkGroupBox";
@@ -135,13 +135,14 @@
             this.checkEvenOddButton.TabIndex = 2;
             this.checkEvenOddButton.Text = "Check for Even or Odd";
             this.checkEvenOddButton.UseVisualStyleBackColor = true;
+            this.checkEvenOddButton.Click += new System.EventHandler(this.checkEvenOddButton_Click);
             // 
-            // eveOddTextBox
+            // evenOddTextBox
             // 
-            this.eveOddTextBox.Location = new System.Drawing.Point(98, 46);
-            this.eveOddTextBox.Name = "eveOddTextBox";
-            this.eveOddTextBox.Size = new System.Drawing.Size(164, 20);
-            this.eveOddTextBox.TabIndex = 1;
+            this.evenOddTextBox.Location = new System.Drawing.Point(98, 46);
+            this.evenOddTextBox.Name = "evenOddTextBox";
+            this.evenOddTextBox.Size = new System.Drawing.Size(164, 20);
+            this.evenOddTextBox.TabIndex = 1;
             // 
             // evenOddLabel
             // 
@@ -155,6 +156,7 @@
             // displayValueSearchGroupBox
             // 
             this.displayValueSearchGroupBox.BackColor = System.Drawing.SystemColors.Control;
+            this.displayValueSearchGroupBox.Controls.Add(this.valuesListBox);
             this.displayValueSearchGroupBox.Controls.Add(this.displayButton);
             this.displayValueSearchGroupBox.Controls.Add(this.searchButton);
             this.displayValueSearchGroupBox.Controls.Add(this.generateValuesButton);
@@ -166,7 +168,6 @@
             this.displayValueSearchGroupBox.Controls.Add(this.lowIndexLabel);
             this.displayValueSearchGroupBox.Controls.Add(this.valueForSearchTextBox);
             this.displayValueSearchGroupBox.Controls.Add(this.valueForSearchLabel);
-            this.displayValueSearchGroupBox.Controls.Add(this.numbersTextBox);
             this.displayValueSearchGroupBox.Controls.Add(this.charRadioButton);
             this.displayValueSearchGroupBox.Controls.Add(this.doubleRadioButton);
             this.displayValueSearchGroupBox.Controls.Add(this.integerRadioButton);
@@ -209,14 +210,6 @@
             this.charRadioButton.TabStop = true;
             this.charRadioButton.Text = "Char";
             this.charRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // numbersTextBox
-            // 
-            this.numbersTextBox.Location = new System.Drawing.Point(17, 44);
-            this.numbersTextBox.Multiline = true;
-            this.numbersTextBox.Name = "numbersTextBox";
-            this.numbersTextBox.Size = new System.Drawing.Size(54, 227);
-            this.numbersTextBox.TabIndex = 3;
             // 
             // valueForSearchLabel
             // 
@@ -291,6 +284,7 @@
             this.generateValuesButton.TabIndex = 12;
             this.generateValuesButton.Text = "Generate Values";
             this.generateValuesButton.UseVisualStyleBackColor = true;
+            this.generateValuesButton.Click += new System.EventHandler(this.generateValuesButton_Click);
             // 
             // searchButton
             // 
@@ -309,6 +303,14 @@
             this.displayButton.TabIndex = 14;
             this.displayButton.Text = "Display";
             this.displayButton.UseVisualStyleBackColor = true;
+            // 
+            // valuesListBox
+            // 
+            this.valuesListBox.FormattingEnabled = true;
+            this.valuesListBox.Location = new System.Drawing.Point(17, 44);
+            this.valuesListBox.Name = "valuesListBox";
+            this.valuesListBox.Size = new System.Drawing.Size(63, 225);
+            this.valuesListBox.TabIndex = 15;
             // 
             // AsynchronousProgrammingForm
             // 
@@ -342,7 +344,7 @@
         private System.Windows.Forms.TextBox factorialTextBox;
         private System.Windows.Forms.Label evenOddResultLabel;
         private System.Windows.Forms.Button checkEvenOddButton;
-        private System.Windows.Forms.TextBox eveOddTextBox;
+        private System.Windows.Forms.TextBox evenOddTextBox;
         private System.Windows.Forms.Label evenOddLabel;
         private System.Windows.Forms.Label OutputValueSearchLabel;
         private System.Windows.Forms.TextBox highIndexTextBox;
@@ -351,7 +353,6 @@
         private System.Windows.Forms.Label lowIndexLabel;
         private System.Windows.Forms.TextBox valueForSearchTextBox;
         private System.Windows.Forms.Label valueForSearchLabel;
-        private System.Windows.Forms.TextBox numbersTextBox;
         private System.Windows.Forms.RadioButton charRadioButton;
         private System.Windows.Forms.RadioButton doubleRadioButton;
         private System.Windows.Forms.RadioButton integerRadioButton;
@@ -359,6 +360,7 @@
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button generateValuesButton;
         private System.Windows.Forms.TextBox OutputValueSearchTextBox;
+        private System.Windows.Forms.ListBox valuesListBox;
     }
 }
 
