@@ -44,26 +44,38 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
         #region GroupBox2
         private void checkEvenOddButton_Click(object sender, EventArgs e)
         {
-            evenOddResultLabel.Text = "Calculating";
-
+            Predicate<int> evenP = IsEven;
+            Predicate<int> oddP = IsOdd;
             try
             {
-                evenOddResultLabel.Text = Convert.ToString(IsEven(Convert.ToInt32(evenOddTextBox.Text)));
+                int typedNumber = Convert.ToInt32(evenOddTextBox.Text);
+                if (typedNumber < 0)
+                {
+                    MessageBox.Show("Please enter a positive value", "Error", MessageBoxButtons.OK);
+                    evenOddResultLabel.Text = "";
+                }
+                else if (evenP(typedNumber))
+                {
+                    evenOddResultLabel.Text = "Even";
+                } 
+                else if (oddP(typedNumber))
+                {
+                    evenOddResultLabel.Text = "Odd";
+                }
             }
             catch (System.FormatException)
             {
                 MessageBox.Show("Please enter an integer", "Error", MessageBoxButtons.OK);
                 evenOddResultLabel.Text = "";
             }
+            catch (System.OverflowException)
+            {
+                MessageBox.Show("Please enter an integer up to to 2,147,483,647 ", "Error", MessageBoxButtons.OK);
+                evenOddResultLabel.Text = "";
+            }
         }
-        private bool IsEven(int n)
-        {
-            return n % 2 == 0;
-        }
-        private bool IsOdd(int n)
-        {
-            return n % 2 != 0;
-        }
+        private static bool IsEven(int n) => n % 2 == 0;
+        private bool IsOdd(int n) => n % 2 != 0;
         #endregion
 
         #region GroupBox3
@@ -106,9 +118,16 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
             //}
         }
 
+        private void SearchData<T>(List<T> list)
+        {
+
+        }
 
 
-
+        private void valuesListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            valueForSearchTextBox.Text = valuesListBox.SelectedItem.ToString();
+        }
 
 
 
@@ -116,5 +135,6 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
 
 
         #endregion
+
     }
 }

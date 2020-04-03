@@ -39,21 +39,21 @@
             this.evenOddTextBox = new System.Windows.Forms.TextBox();
             this.evenOddLabel = new System.Windows.Forms.Label();
             this.displayValueSearchGroupBox = new System.Windows.Forms.GroupBox();
-            this.integerRadioButton = new System.Windows.Forms.RadioButton();
-            this.doubleRadioButton = new System.Windows.Forms.RadioButton();
-            this.charRadioButton = new System.Windows.Forms.RadioButton();
-            this.valueForSearchLabel = new System.Windows.Forms.Label();
-            this.valueForSearchTextBox = new System.Windows.Forms.TextBox();
-            this.lowIndexTextBox = new System.Windows.Forms.TextBox();
-            this.lowIndexLabel = new System.Windows.Forms.Label();
+            this.valuesListBox = new System.Windows.Forms.ListBox();
+            this.displayButton = new System.Windows.Forms.Button();
+            this.searchButton = new System.Windows.Forms.Button();
+            this.generateValuesButton = new System.Windows.Forms.Button();
+            this.OutputValueSearchTextBox = new System.Windows.Forms.TextBox();
+            this.OutputValueSearchLabel = new System.Windows.Forms.Label();
             this.highIndexTextBox = new System.Windows.Forms.TextBox();
             this.highIndexLabel = new System.Windows.Forms.Label();
-            this.OutputValueSearchLabel = new System.Windows.Forms.Label();
-            this.OutputValueSearchTextBox = new System.Windows.Forms.TextBox();
-            this.generateValuesButton = new System.Windows.Forms.Button();
-            this.searchButton = new System.Windows.Forms.Button();
-            this.displayButton = new System.Windows.Forms.Button();
-            this.valuesListBox = new System.Windows.Forms.ListBox();
+            this.lowIndexTextBox = new System.Windows.Forms.TextBox();
+            this.lowIndexLabel = new System.Windows.Forms.Label();
+            this.valueForSearchTextBox = new System.Windows.Forms.TextBox();
+            this.valueForSearchLabel = new System.Windows.Forms.Label();
+            this.charRadioButton = new System.Windows.Forms.RadioButton();
+            this.doubleRadioButton = new System.Windows.Forms.RadioButton();
+            this.integerRadioButton = new System.Windows.Forms.RadioButton();
             this.calculateGroupBox.SuspendLayout();
             this.checkGroupBox.SuspendLayout();
             this.displayValueSearchGroupBox.SuspendLayout();
@@ -178,70 +178,59 @@
             this.displayValueSearchGroupBox.TabStop = false;
             this.displayValueSearchGroupBox.Text = "(3) Display List of Values and Search";
             // 
-            // integerRadioButton
+            // valuesListBox
             // 
-            this.integerRadioButton.AutoSize = true;
-            this.integerRadioButton.Location = new System.Drawing.Point(17, 20);
-            this.integerRadioButton.Name = "integerRadioButton";
-            this.integerRadioButton.Size = new System.Drawing.Size(63, 17);
-            this.integerRadioButton.TabIndex = 0;
-            this.integerRadioButton.TabStop = true;
-            this.integerRadioButton.Text = "Integers";
-            this.integerRadioButton.UseVisualStyleBackColor = true;
+            this.valuesListBox.FormattingEnabled = true;
+            this.valuesListBox.Location = new System.Drawing.Point(17, 44);
+            this.valuesListBox.Name = "valuesListBox";
+            this.valuesListBox.Size = new System.Drawing.Size(63, 225);
+            this.valuesListBox.TabIndex = 15;
+            this.valuesListBox.SelectedIndexChanged += new System.EventHandler(this.valuesListBox_SelectedIndexChanged);
             // 
-            // doubleRadioButton
+            // displayButton
             // 
-            this.doubleRadioButton.AutoSize = true;
-            this.doubleRadioButton.Location = new System.Drawing.Point(99, 20);
-            this.doubleRadioButton.Name = "doubleRadioButton";
-            this.doubleRadioButton.Size = new System.Drawing.Size(64, 17);
-            this.doubleRadioButton.TabIndex = 1;
-            this.doubleRadioButton.TabStop = true;
-            this.doubleRadioButton.Text = "Doubles";
-            this.doubleRadioButton.UseVisualStyleBackColor = true;
+            this.displayButton.Location = new System.Drawing.Point(332, 108);
+            this.displayButton.Name = "displayButton";
+            this.displayButton.Size = new System.Drawing.Size(127, 23);
+            this.displayButton.TabIndex = 14;
+            this.displayButton.Text = "Display";
+            this.displayButton.UseVisualStyleBackColor = true;
             // 
-            // charRadioButton
+            // searchButton
             // 
-            this.charRadioButton.AutoSize = true;
-            this.charRadioButton.Location = new System.Drawing.Point(170, 20);
-            this.charRadioButton.Name = "charRadioButton";
-            this.charRadioButton.Size = new System.Drawing.Size(47, 17);
-            this.charRadioButton.TabIndex = 2;
-            this.charRadioButton.TabStop = true;
-            this.charRadioButton.Text = "Char";
-            this.charRadioButton.UseVisualStyleBackColor = true;
+            this.searchButton.Location = new System.Drawing.Point(332, 52);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(127, 23);
+            this.searchButton.TabIndex = 13;
+            this.searchButton.Text = "Search";
+            this.searchButton.UseVisualStyleBackColor = true;
             // 
-            // valueForSearchLabel
+            // generateValuesButton
             // 
-            this.valueForSearchLabel.AutoSize = true;
-            this.valueForSearchLabel.Location = new System.Drawing.Point(99, 63);
-            this.valueForSearchLabel.Name = "valueForSearchLabel";
-            this.valueForSearchLabel.Size = new System.Drawing.Size(113, 13);
-            this.valueForSearchLabel.TabIndex = 4;
-            this.valueForSearchLabel.Text = "Input Value for Search";
+            this.generateValuesButton.Location = new System.Drawing.Point(332, 20);
+            this.generateValuesButton.Name = "generateValuesButton";
+            this.generateValuesButton.Size = new System.Drawing.Size(127, 23);
+            this.generateValuesButton.TabIndex = 12;
+            this.generateValuesButton.Text = "Generate Values";
+            this.generateValuesButton.UseVisualStyleBackColor = true;
+            this.generateValuesButton.Click += new System.EventHandler(this.generateValuesButton_Click);
             // 
-            // valueForSearchTextBox
+            // OutputValueSearchTextBox
             // 
-            this.valueForSearchTextBox.Location = new System.Drawing.Point(219, 55);
-            this.valueForSearchTextBox.Name = "valueForSearchTextBox";
-            this.valueForSearchTextBox.Size = new System.Drawing.Size(100, 20);
-            this.valueForSearchTextBox.TabIndex = 5;
+            this.OutputValueSearchTextBox.Location = new System.Drawing.Point(99, 164);
+            this.OutputValueSearchTextBox.Multiline = true;
+            this.OutputValueSearchTextBox.Name = "OutputValueSearchTextBox";
+            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(360, 107);
+            this.OutputValueSearchTextBox.TabIndex = 11;
             // 
-            // lowIndexTextBox
+            // OutputValueSearchLabel
             // 
-            this.lowIndexTextBox.Location = new System.Drawing.Point(219, 85);
-            this.lowIndexTextBox.Name = "lowIndexTextBox";
-            this.lowIndexTextBox.Size = new System.Drawing.Size(100, 20);
-            this.lowIndexTextBox.TabIndex = 7;
-            // 
-            // lowIndexLabel
-            // 
-            this.lowIndexLabel.AutoSize = true;
-            this.lowIndexLabel.Location = new System.Drawing.Point(99, 93);
-            this.lowIndexLabel.Name = "lowIndexLabel";
-            this.lowIndexLabel.Size = new System.Drawing.Size(83, 13);
-            this.lowIndexLabel.TabIndex = 6;
-            this.lowIndexLabel.Text = "Input Low Index";
+            this.OutputValueSearchLabel.AutoSize = true;
+            this.OutputValueSearchLabel.Location = new System.Drawing.Point(99, 147);
+            this.OutputValueSearchLabel.Name = "OutputValueSearchLabel";
+            this.OutputValueSearchLabel.Size = new System.Drawing.Size(201, 13);
+            this.OutputValueSearchLabel.TabIndex = 10;
+            this.OutputValueSearchLabel.Text = "Output of values between Low and High:";
             // 
             // highIndexTextBox
             // 
@@ -259,58 +248,70 @@
             this.highIndexLabel.TabIndex = 8;
             this.highIndexLabel.Text = "Input High Index";
             // 
-            // OutputValueSearchLabel
+            // lowIndexTextBox
             // 
-            this.OutputValueSearchLabel.AutoSize = true;
-            this.OutputValueSearchLabel.Location = new System.Drawing.Point(99, 147);
-            this.OutputValueSearchLabel.Name = "OutputValueSearchLabel";
-            this.OutputValueSearchLabel.Size = new System.Drawing.Size(201, 13);
-            this.OutputValueSearchLabel.TabIndex = 10;
-            this.OutputValueSearchLabel.Text = "Output of values between Low and High:";
+            this.lowIndexTextBox.Location = new System.Drawing.Point(219, 85);
+            this.lowIndexTextBox.Name = "lowIndexTextBox";
+            this.lowIndexTextBox.Size = new System.Drawing.Size(100, 20);
+            this.lowIndexTextBox.TabIndex = 7;
             // 
-            // OutputValueSearchTextBox
+            // lowIndexLabel
             // 
-            this.OutputValueSearchTextBox.Location = new System.Drawing.Point(99, 164);
-            this.OutputValueSearchTextBox.Multiline = true;
-            this.OutputValueSearchTextBox.Name = "OutputValueSearchTextBox";
-            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(360, 107);
-            this.OutputValueSearchTextBox.TabIndex = 11;
+            this.lowIndexLabel.AutoSize = true;
+            this.lowIndexLabel.Location = new System.Drawing.Point(99, 93);
+            this.lowIndexLabel.Name = "lowIndexLabel";
+            this.lowIndexLabel.Size = new System.Drawing.Size(83, 13);
+            this.lowIndexLabel.TabIndex = 6;
+            this.lowIndexLabel.Text = "Input Low Index";
             // 
-            // generateValuesButton
+            // valueForSearchTextBox
             // 
-            this.generateValuesButton.Location = new System.Drawing.Point(332, 20);
-            this.generateValuesButton.Name = "generateValuesButton";
-            this.generateValuesButton.Size = new System.Drawing.Size(127, 23);
-            this.generateValuesButton.TabIndex = 12;
-            this.generateValuesButton.Text = "Generate Values";
-            this.generateValuesButton.UseVisualStyleBackColor = true;
-            this.generateValuesButton.Click += new System.EventHandler(this.generateValuesButton_Click);
+            this.valueForSearchTextBox.Location = new System.Drawing.Point(219, 55);
+            this.valueForSearchTextBox.Name = "valueForSearchTextBox";
+            this.valueForSearchTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valueForSearchTextBox.TabIndex = 5;
             // 
-            // searchButton
+            // valueForSearchLabel
             // 
-            this.searchButton.Location = new System.Drawing.Point(332, 52);
-            this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(127, 23);
-            this.searchButton.TabIndex = 13;
-            this.searchButton.Text = "Search";
-            this.searchButton.UseVisualStyleBackColor = true;
+            this.valueForSearchLabel.AutoSize = true;
+            this.valueForSearchLabel.Location = new System.Drawing.Point(99, 63);
+            this.valueForSearchLabel.Name = "valueForSearchLabel";
+            this.valueForSearchLabel.Size = new System.Drawing.Size(113, 13);
+            this.valueForSearchLabel.TabIndex = 4;
+            this.valueForSearchLabel.Text = "Input Value for Search";
             // 
-            // displayButton
+            // charRadioButton
             // 
-            this.displayButton.Location = new System.Drawing.Point(332, 108);
-            this.displayButton.Name = "displayButton";
-            this.displayButton.Size = new System.Drawing.Size(127, 23);
-            this.displayButton.TabIndex = 14;
-            this.displayButton.Text = "Display";
-            this.displayButton.UseVisualStyleBackColor = true;
+            this.charRadioButton.AutoSize = true;
+            this.charRadioButton.Location = new System.Drawing.Point(170, 20);
+            this.charRadioButton.Name = "charRadioButton";
+            this.charRadioButton.Size = new System.Drawing.Size(47, 17);
+            this.charRadioButton.TabIndex = 2;
+            this.charRadioButton.TabStop = true;
+            this.charRadioButton.Text = "Char";
+            this.charRadioButton.UseVisualStyleBackColor = true;
             // 
-            // valuesListBox
+            // doubleRadioButton
             // 
-            this.valuesListBox.FormattingEnabled = true;
-            this.valuesListBox.Location = new System.Drawing.Point(17, 44);
-            this.valuesListBox.Name = "valuesListBox";
-            this.valuesListBox.Size = new System.Drawing.Size(63, 225);
-            this.valuesListBox.TabIndex = 15;
+            this.doubleRadioButton.AutoSize = true;
+            this.doubleRadioButton.Location = new System.Drawing.Point(99, 20);
+            this.doubleRadioButton.Name = "doubleRadioButton";
+            this.doubleRadioButton.Size = new System.Drawing.Size(64, 17);
+            this.doubleRadioButton.TabIndex = 1;
+            this.doubleRadioButton.TabStop = true;
+            this.doubleRadioButton.Text = "Doubles";
+            this.doubleRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // integerRadioButton
+            // 
+            this.integerRadioButton.AutoSize = true;
+            this.integerRadioButton.Location = new System.Drawing.Point(17, 20);
+            this.integerRadioButton.Name = "integerRadioButton";
+            this.integerRadioButton.Size = new System.Drawing.Size(63, 17);
+            this.integerRadioButton.TabIndex = 0;
+            this.integerRadioButton.TabStop = true;
+            this.integerRadioButton.Text = "Integers";
+            this.integerRadioButton.UseVisualStyleBackColor = true;
             // 
             // AsynchronousProgrammingForm
             // 
