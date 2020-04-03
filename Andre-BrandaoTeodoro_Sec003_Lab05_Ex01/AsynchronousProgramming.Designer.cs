@@ -68,21 +68,21 @@
             this.calculateGroupBox.Controls.Add(this.factorialLabel);
             this.calculateGroupBox.Location = new System.Drawing.Point(12, 12);
             this.calculateGroupBox.Name = "calculateGroupBox";
-            this.calculateGroupBox.Size = new System.Drawing.Size(282, 147);
+            this.calculateGroupBox.Size = new System.Drawing.Size(282, 106);
             this.calculateGroupBox.TabIndex = 0;
             this.calculateGroupBox.TabStop = false;
             this.calculateGroupBox.Text = "(1) Calculate Asyndhronously";
             // 
             // factorialResultLabel
             // 
-            this.factorialResultLabel.Location = new System.Drawing.Point(99, 83);
+            this.factorialResultLabel.Location = new System.Drawing.Point(99, 78);
             this.factorialResultLabel.Name = "factorialResultLabel";
-            this.factorialResultLabel.Size = new System.Drawing.Size(164, 49);
+            this.factorialResultLabel.Size = new System.Drawing.Size(164, 28);
             this.factorialResultLabel.TabIndex = 3;
             // 
             // calculateFactorialButton
             // 
-            this.calculateFactorialButton.Location = new System.Drawing.Point(14, 83);
+            this.calculateFactorialButton.Location = new System.Drawing.Point(13, 78);
             this.calculateFactorialButton.Name = "calculateFactorialButton";
             this.calculateFactorialButton.Size = new System.Drawing.Size(75, 23);
             this.calculateFactorialButton.TabIndex = 2;
@@ -113,23 +113,23 @@
             this.checkGroupBox.Controls.Add(this.checkEvenOddButton);
             this.checkGroupBox.Controls.Add(this.evenOddTextBox);
             this.checkGroupBox.Controls.Add(this.evenOddLabel);
-            this.checkGroupBox.Location = new System.Drawing.Point(13, 166);
+            this.checkGroupBox.Location = new System.Drawing.Point(14, 126);
             this.checkGroupBox.Name = "checkGroupBox";
-            this.checkGroupBox.Size = new System.Drawing.Size(281, 138);
+            this.checkGroupBox.Size = new System.Drawing.Size(281, 121);
             this.checkGroupBox.TabIndex = 1;
             this.checkGroupBox.TabStop = false;
             this.checkGroupBox.Text = "(2) Check for Even/Odd";
             // 
             // evenOddResultLabel
             // 
-            this.evenOddResultLabel.Location = new System.Drawing.Point(154, 95);
+            this.evenOddResultLabel.Location = new System.Drawing.Point(151, 83);
             this.evenOddResultLabel.Name = "evenOddResultLabel";
             this.evenOddResultLabel.Size = new System.Drawing.Size(100, 23);
             this.evenOddResultLabel.TabIndex = 3;
             // 
             // checkEvenOddButton
             // 
-            this.checkEvenOddButton.Location = new System.Drawing.Point(13, 95);
+            this.checkEvenOddButton.Location = new System.Drawing.Point(11, 81);
             this.checkEvenOddButton.Name = "checkEvenOddButton";
             this.checkEvenOddButton.Size = new System.Drawing.Size(134, 23);
             this.checkEvenOddButton.TabIndex = 2;
@@ -173,7 +173,7 @@
             this.displayValueSearchGroupBox.Controls.Add(this.integerRadioButton);
             this.displayValueSearchGroupBox.Location = new System.Drawing.Point(301, 13);
             this.displayValueSearchGroupBox.Name = "displayValueSearchGroupBox";
-            this.displayValueSearchGroupBox.Size = new System.Drawing.Size(487, 291);
+            this.displayValueSearchGroupBox.Size = new System.Drawing.Size(487, 234);
             this.displayValueSearchGroupBox.TabIndex = 2;
             this.displayValueSearchGroupBox.TabStop = false;
             this.displayValueSearchGroupBox.Text = "(3) Display List of Values and Search";
@@ -183,7 +183,7 @@
             this.valuesListBox.FormattingEnabled = true;
             this.valuesListBox.Location = new System.Drawing.Point(17, 44);
             this.valuesListBox.Name = "valuesListBox";
-            this.valuesListBox.Size = new System.Drawing.Size(124, 225);
+            this.valuesListBox.Size = new System.Drawing.Size(124, 173);
             this.valuesListBox.TabIndex = 15;
             // 
             // displayButton
@@ -221,7 +221,7 @@
             this.OutputValueSearchTextBox.Location = new System.Drawing.Point(150, 164);
             this.OutputValueSearchTextBox.Multiline = true;
             this.OutputValueSearchTextBox.Name = "OutputValueSearchTextBox";
-            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(309, 107);
+            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(309, 55);
             this.OutputValueSearchTextBox.TabIndex = 11;
             // 
             // OutputValueSearchLabel
@@ -319,12 +319,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(800, 320);
+            this.ClientSize = new System.Drawing.Size(800, 259);
             this.Controls.Add(this.displayValueSearchGroupBox);
             this.Controls.Add(this.checkGroupBox);
             this.Controls.Add(this.calculateGroupBox);
             this.Name = "AsynchronousProgrammingForm";
-            this.Text = "Asynchronous Programming";
+            this.Text = "s";
             this.calculateGroupBox.ResumeLayout(false);
             this.calculateGroupBox.PerformLayout();
             this.checkGroupBox.ResumeLayout(false);

@@ -45,6 +45,10 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
                 MessageBox.Show("Result exceed long datatype range", "Error", MessageBoxButtons.OK);
                 factorialResultLabel.Text = "";
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
         // recursive function to calculate factorial
         private long Factorial(long num)
@@ -200,7 +204,6 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
         }
         private void displayButton_Click(object sender, EventArgs e)
         {
-
             try
             {
                 // initialize the low and high index
@@ -223,6 +226,10 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
             catch (FormatException)
             {
                 OutputValueSearchTextBox.Text = "Please index between 0 and 9";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
             }
         }
         public string Display(int lowIndex, int highIndex)
