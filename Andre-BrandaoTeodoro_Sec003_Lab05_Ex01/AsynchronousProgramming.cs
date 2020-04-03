@@ -21,7 +21,9 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
         private async void calculateFactorialButton_Click(object sender, EventArgs e)
         {
             factorialResultLabel.Text = "Calculating";
+            
             try {
+                if (Convert.ToInt64(factorialTextBox.Text) > 20) { throw new System.StackOverflowException(); }
                 Task<long> task1 = Task.Run(() => Factorial(Convert.ToInt64(factorialTextBox.Text)));
                 await Task.WhenAll(task1);
                 factorialResultLabel.Text = Convert.ToString(task1.Result);
@@ -29,6 +31,11 @@ namespace Andre_BrandaoTeodoro_Sec003_Lab05_Ex01
             catch (System.FormatException)
             {
                 MessageBox.Show("Please enter an integer", "Error", MessageBoxButtons.OK);
+                factorialResultLabel.Text = "";
+            }
+            catch (System.StackOverflowException)
+            {
+                MessageBox.Show("Result exceed long datatype range", "Error", MessageBoxButtons.OK);
                 factorialResultLabel.Text = "";
             }
         }

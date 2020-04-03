@@ -77,7 +77,7 @@
             // 
             this.factorialResultLabel.Location = new System.Drawing.Point(99, 83);
             this.factorialResultLabel.Name = "factorialResultLabel";
-            this.factorialResultLabel.Size = new System.Drawing.Size(164, 23);
+            this.factorialResultLabel.Size = new System.Drawing.Size(164, 49);
             this.factorialResultLabel.TabIndex = 3;
             // 
             // calculateFactorialButton
