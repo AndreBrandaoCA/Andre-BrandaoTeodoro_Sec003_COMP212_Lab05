@@ -183,9 +183,8 @@
             this.valuesListBox.FormattingEnabled = true;
             this.valuesListBox.Location = new System.Drawing.Point(17, 44);
             this.valuesListBox.Name = "valuesListBox";
-            this.valuesListBox.Size = new System.Drawing.Size(63, 225);
+            this.valuesListBox.Size = new System.Drawing.Size(124, 225);
             this.valuesListBox.TabIndex = 15;
-            this.valuesListBox.SelectedIndexChanged += new System.EventHandler(this.valuesListBox_SelectedIndexChanged);
             // 
             // displayButton
             // 
@@ -195,6 +194,7 @@
             this.displayButton.TabIndex = 14;
             this.displayButton.Text = "Display";
             this.displayButton.UseVisualStyleBackColor = true;
+            this.displayButton.Click += new System.EventHandler(this.displayButton_Click);
             // 
             // searchButton
             // 
@@ -204,6 +204,7 @@
             this.searchButton.TabIndex = 13;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // generateValuesButton
             // 
@@ -217,16 +218,16 @@
             // 
             // OutputValueSearchTextBox
             // 
-            this.OutputValueSearchTextBox.Location = new System.Drawing.Point(99, 164);
+            this.OutputValueSearchTextBox.Location = new System.Drawing.Point(150, 164);
             this.OutputValueSearchTextBox.Multiline = true;
             this.OutputValueSearchTextBox.Name = "OutputValueSearchTextBox";
-            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(360, 107);
+            this.OutputValueSearchTextBox.Size = new System.Drawing.Size(309, 107);
             this.OutputValueSearchTextBox.TabIndex = 11;
             // 
             // OutputValueSearchLabel
             // 
             this.OutputValueSearchLabel.AutoSize = true;
-            this.OutputValueSearchLabel.Location = new System.Drawing.Point(99, 147);
+            this.OutputValueSearchLabel.Location = new System.Drawing.Point(147, 148);
             this.OutputValueSearchLabel.Name = "OutputValueSearchLabel";
             this.OutputValueSearchLabel.Size = new System.Drawing.Size(201, 13);
             this.OutputValueSearchLabel.TabIndex = 10;
@@ -234,15 +235,15 @@
             // 
             // highIndexTextBox
             // 
-            this.highIndexTextBox.Location = new System.Drawing.Point(219, 111);
+            this.highIndexTextBox.Location = new System.Drawing.Point(266, 111);
             this.highIndexTextBox.Name = "highIndexTextBox";
-            this.highIndexTextBox.Size = new System.Drawing.Size(100, 20);
+            this.highIndexTextBox.Size = new System.Drawing.Size(53, 20);
             this.highIndexTextBox.TabIndex = 9;
             // 
             // highIndexLabel
             // 
             this.highIndexLabel.AutoSize = true;
-            this.highIndexLabel.Location = new System.Drawing.Point(99, 119);
+            this.highIndexLabel.Location = new System.Drawing.Point(147, 113);
             this.highIndexLabel.Name = "highIndexLabel";
             this.highIndexLabel.Size = new System.Drawing.Size(85, 13);
             this.highIndexLabel.TabIndex = 8;
@@ -250,15 +251,15 @@
             // 
             // lowIndexTextBox
             // 
-            this.lowIndexTextBox.Location = new System.Drawing.Point(219, 85);
+            this.lowIndexTextBox.Location = new System.Drawing.Point(266, 85);
             this.lowIndexTextBox.Name = "lowIndexTextBox";
-            this.lowIndexTextBox.Size = new System.Drawing.Size(100, 20);
+            this.lowIndexTextBox.Size = new System.Drawing.Size(53, 20);
             this.lowIndexTextBox.TabIndex = 7;
             // 
             // lowIndexLabel
             // 
             this.lowIndexLabel.AutoSize = true;
-            this.lowIndexLabel.Location = new System.Drawing.Point(99, 93);
+            this.lowIndexLabel.Location = new System.Drawing.Point(147, 88);
             this.lowIndexLabel.Name = "lowIndexLabel";
             this.lowIndexLabel.Size = new System.Drawing.Size(83, 13);
             this.lowIndexLabel.TabIndex = 6;
@@ -266,15 +267,15 @@
             // 
             // valueForSearchTextBox
             // 
-            this.valueForSearchTextBox.Location = new System.Drawing.Point(219, 55);
+            this.valueForSearchTextBox.Location = new System.Drawing.Point(266, 55);
             this.valueForSearchTextBox.Name = "valueForSearchTextBox";
-            this.valueForSearchTextBox.Size = new System.Drawing.Size(100, 20);
+            this.valueForSearchTextBox.Size = new System.Drawing.Size(53, 20);
             this.valueForSearchTextBox.TabIndex = 5;
             // 
             // valueForSearchLabel
             // 
             this.valueForSearchLabel.AutoSize = true;
-            this.valueForSearchLabel.Location = new System.Drawing.Point(99, 63);
+            this.valueForSearchLabel.Location = new System.Drawing.Point(147, 58);
             this.valueForSearchLabel.Name = "valueForSearchLabel";
             this.valueForSearchLabel.Size = new System.Drawing.Size(113, 13);
             this.valueForSearchLabel.TabIndex = 4;
